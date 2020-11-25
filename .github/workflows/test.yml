@@ -18,4 +18,4 @@ jobs:
         python-version: 3.7
     - name: Test
       run: |
-        python test.py
+        python test.py && "Test are successful"
