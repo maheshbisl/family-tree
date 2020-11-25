@@ -21,6 +21,9 @@ assert add_spouse("Ginerva", "Harry") == True
 
 assert get_relationship("Flora", "Spouse") == "Bill"
 assert get_relationship("Bill", "Siblings") == ['Charlie', 'Percy', 'Ronald', 'Ginerva']
+assert get_relationship("Bill", "Sisters") == ['Ginerva']
+assert get_relationship("Bill", "Brothers") == ['Charlie', 'Percy', 'Ronald']
+
 assert get_relationship("Queen Margret", "Daughters") == [ 'Ginerva' ]
 assert get_relationship("Queen Margret", "Sons") == [ 'Bill', 'Charlie', 'Percy', 'Ronald']
 
