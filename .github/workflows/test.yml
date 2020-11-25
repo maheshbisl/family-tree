@@ -6,7 +6,8 @@ name: Python application
 on: [push, pull_request]
 
 jobs:
-  Test:
+  build:
+
     runs-on: ubuntu-latest
 
     steps:
