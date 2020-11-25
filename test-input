@@ -1,0 +1,65 @@
+ADD_CHILD Queen-Margret Bill Male
+ADD_CHILD Queen-Margret Bill Male
+ADD_CHILD Queen-Margret Charlie Male
+ADD_CHILD Queen-Margret Percy Male
+ADD_CHILD Queen-Margret Ronald Male
+ADD_CHILD Queen-Margret Ginerva Female
+GET_RELATIONSHIP Queen-Margret Spouse
+ADD_SPOUSE Bill Flora
+ADD_SPOUSE Bill Flora
+ADD_SPOUSE Bill Julia
+ADD_SPOUSE Percy Audrey
+ADD_SPOUSE Ronald Helen
+ADD_SPOUSE Ginerva Harry
+GET_RELATIONSHIP Flora Spouse
+GET_RELATIONSHIP Bill Siblings
+GET_RELATIONSHIP Bill Sisters
+GET_RELATIONSHIP Bill Brothers
+GET_RELATIONSHIP Queen-Margret Daughters
+GET_RELATIONSHIP Queen-Margret Sons
+ADD_CHILD Flora Louis Male
+ADD_CHILD Flora Victoire Female
+ADD_CHILD Flora Dominique Female
+ADD_CHILD Audrey Molly Female
+ADD_CHILD Audrey Lucy Female
+ADD_CHILD Ginerva James Male
+ADD_SPOUSE James Darcy
+ADD_CHILD Darcy William Male
+ADD_CHILD Ginerva Albus Male
+ADD_SPOUSE Albus Alice
+ADD_CHILD Alice Ron Male
+ADD_CHILD Alice Ginny Female
+ADD_CHILD Ginerva Lily Female
+ADD_CHILD Helen Hugo Male
+ADD_CHILD Helen Rose Female
+ADD_SPOUSE Rose Malfoy
+ADD_CHILD Rose Draco Male
+ADD_CHILD Rose Aster Female
+ADD_CHILD Victoire Remus Male
+ADD_SPOUSE Victoire Ted
+GET_RELATIONSHIP Louis Paternal-Uncles
+GET_RELATIONSHIP Louis Paternal-Aunts
+GET_RELATIONSHIP Remus Maternal-Uncles
+GET_RELATIONSHIP Remus Maternal-Aunts
+GET_RELATIONSHIP Ted Brothers-In-Law
+GET_RELATIONSHIP Louis Brothers-In-Law
+GET_RELATIONSHIP Dominique Brothers-In-Law
+GET_RELATIONSHIP Ted Sisters-In-Law
+GET_RELATIONSHIP James Maternal-Uncles
+GET_RELATIONSHIP Lily Sisters-In-Law
+GET_RELATIONSHIP William Paternal-Uncles
+GET_RELATIONSHIP William Paternal-Aunts
+GET_RELATIONSHIP Darcy Brothers-In-Law
+GET_RELATIONSHIP Helen Brothers-In-Law
+GET_RELATIONSHIP Draco Maternal-Uncles
+GET_RELATIONSHIP Ron Paternal-Aunts
+GET_RELATIONSHIP Mahesh Paternal-Uncles
+GET_RELATIONSHIP Rashmi Maternal-Aunts
+GET_RELATIONSHIP Ginny Brothers
+GET_RELATIONSHIP William Sisters
+GET_RELATIONSHIP William Paternal-Uncles
+GET_RELATIONSHIP William Paternal-Aunts
+GET_RELATIONSHIP Ginny Paternal-Aunts
+GET_RELATIONSHIP Lucy Paternal-Uncles
+GET_RELATIONSHIP Remus Siblings
+GET_RELATIONSHIP Victoire Siblings
