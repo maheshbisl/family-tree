@@ -10,24 +10,27 @@
 1. No Duplicate names
 
 ## Commands
-* ADD_CHILD <Child's Mother>  <Child's name> <Gender> 
-* ADD_SPOUSE <Member's Name> <Spouse Name>
-* GET_RELATIONSHIP <Member's name> <Relationship Name>
-** Relationship:
-*** Spouse
-*** Daughters
-*** Siblings
-*** Sons
-*** Brothers
-*** Sisters
-*** Paternal-Uncles
-*** Paternal-Aunts
-*** Maternal-Uncles
-*** Maternal-Aunts
-*** Sisters-In-Law
-*** Brothers-In-Law
+* ADD_CHILD Mother Child Gender 
+* ADD_SPOUSE Name Spouse
+* GET_RELATIONSHIP Name Relationship
 
+### Relationship:
+- Spouse
+- Daughters
+- Siblings
+- Sons
+- Brothers
+- Sisters
+- Paternal-Uncles
+- Paternal-Aunts
+- Maternal-Uncles
+- Maternal-Aunts
+- Sisters-In-Law
+- Brothers-In-Law
 
+## CI/CD
+1. GitHub actions
+2. Check .github/workflows/test.yml
 
 ## Solution
 
