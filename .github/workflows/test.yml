@@ -6,8 +6,7 @@ name: Python application
 on: [push, pull_request]
 
 jobs:
-  build:
-
+  Python-Test:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,3 +18,16 @@ jobs:
     - name: Test
       run: |
         python test.py
+
+	Cmd-Test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+    - name: Test
+      run: |
+      	python family_tree.py test-input
