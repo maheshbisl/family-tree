@@ -19,4 +19,3 @@ jobs:
     - name: Test
       run: |
         python test.py
-        echo "Test are successful"
