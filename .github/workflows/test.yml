@@ -15,10 +15,9 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.7
-    - name: Python Test
+    - name: Test
       run: |
+      	set -ex
         python test.py
-
-    - name: Input file Test
-      run: |
-      	python family_tree.py test-input
+      	python family_tree.py test-input > /tmp/tmp-output
+        diff test-output /tmp/tmp-output || exit -1
