@@ -7,7 +7,7 @@ def print_family():
 
 
 assert add_child("Queen Margret", "Bill", "Male") == True
-assert add_child("Queen Margret", "Bill", "Male") == False 
+assert add_child("Queen Margret", "Bill", "Male") == False
 assert add_child("Queen Margret", "Charlie", "Male") == True
 assert add_child("Queen Margret", "Percy", "Male") == True
 assert add_child("Queen Margret", "Ronald", "Male") == True
@@ -24,7 +24,7 @@ assert add_spouse("Ginerva", "Harry") == True
 
 assert get_relationship("Flora", "Spouse") == "Bill"
 assert get_relationship(
-    "Bill", "Siblings") == ['Charlie', 'Percy', 'Ronald', 'Ginerva']
+    "Bill", "Siblings") == ['Charlie', 'Ginerva', 'Percy', 'Ronald']
 assert get_relationship("Bill", "Sisters") == ['Ginerva']
 assert get_relationship("Bill", "Brothers") == ['Charlie', 'Percy', 'Ronald']
 
@@ -70,9 +70,11 @@ assert get_relationship('Louis', 'Brothers-In-Law') == ['Ted']
 assert get_relationship('Dominique', 'Brothers-In-Law') == ['Ted']
 assert get_relationship('Ted', 'Sisters-In-Law') == ['Dominique']
 
-assert get_relationship('James', "Maternal-Uncles") == [ "Bill", "Charlie", "Percy", "Ronald"]
-assert get_relationship("Lily", "Sisters-In-Law") == [ "Darcy", "Alice" ]
-assert get_relationship("William", "Paternal-Uncles") == [ "Albus"]
+assert get_relationship(
+    'James', "Maternal-Uncles") == ["Bill", "Charlie", "Percy", "Ronald"]
+assert get_relationship("Lily", "Sisters-In-Law") == ["Alice", "Darcy"]
+assert get_relationship("William", "Paternal-Uncles") == ["Albus"]
 assert get_relationship("William", "Paternal-Aunts") == ["Lily"]
-assert get_relationship("Darcy", "Brothers-In-Law") == ["Albus" ]
-assert get_relationship("Helen", "Brothers-In-Law") == ["Bill", "Percy", "Harry", "Ronald", "Charlie"]
+assert get_relationship("Darcy", "Brothers-In-Law") == ["Albus"]
+assert get_relationship(
+    "Helen", "Brothers-In-Law") == ["Bill", "Charlie", "Harry", "Percy"]
