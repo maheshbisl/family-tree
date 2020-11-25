@@ -7,8 +7,8 @@
 4. Add new members to the family
 
 ## Commands
-# ADD_CHILD \<Child's name> \<Child's Mother>
-# GET_RELATIONSHIP \<Member's name> \<Relation Ship Name>
+* ADD_CHILD <Child's name> <Child's Mother>
+* GET_RELATIONSHIP <Member's name> <Relation Ship Name>
 
 
 # Solution
