@@ -8,6 +8,7 @@
 
 ## Assumption / Limitations
 1. No Duplicate names
+2. Names cannot have spaces
 
 ## Commands
 * ADD_CHILD Mother Child Gender 

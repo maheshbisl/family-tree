@@ -1,10 +1,10 @@
 family = {
-    "King Arthur": {
+    "King-Arthur": {
         "male": True,
-        "spouse": "Queen Margret"
+        "spouse": "Queen-Margret"
     },
-    "Queen Margret": {
-        "spouse": "King Arthur",
+    "Queen-Margret": {
+        "spouse": "King-Arthur",
         "children": []  # Names of the children
     }
 }
@@ -263,3 +263,27 @@ def get_relationship(name, relationship):
 
     ret.sort()
     return ret
+
+
+if __name__ == '__main__':
+    import sys
+    for line in open(sys.argv[1], "r").readlines():
+        para = line.split()
+
+        if para[0].lower() == 'add_child':
+            if add_child(para[1], para[2], para[3]):
+                print("CHILD_ADDED")
+            else:
+                print("CHILD_NOT_ADDED")
+
+        elif para[0].lower() == 'add_spouse':
+            if add_spouse(para[1], para[2]):
+                print("SPOUSE_ADDED")
+            else:
+                print("SPOUSE_NOT_ADDED")
+
+        elif para[0].lower() == 'get_relationship':
+            if para[2].lower() == 'spouse':
+                print(get_relationship(para[1], para[2]))
+            else:
+                print(" ".join(get_relationship(para[1], para[2])))
