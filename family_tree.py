@@ -213,7 +213,6 @@ def get_sisters_in_law(name):
     if 'spouse' in member:
         sisters_in_law = get_sisters(member['spouse'])
         brothers.extend(get_brothers(member['spouse'])
-                        
     for b in brothers:
         bro = family[b]
         if 'spouse' in bro:
