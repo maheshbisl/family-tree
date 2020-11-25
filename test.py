@@ -54,15 +54,15 @@ assert add_spouse("Rose", "Malfoy") == True
 assert add_child("Rose", "Draco", "Male") == True
 assert add_child("Rose", "Aster", "Female") == True
 
-assert add_child("Victoire", "Rameus", "Male") == True
+assert add_child("Victoire", "Remus", "Male") == True
 assert add_spouse("Victoire", "Ted") == True
 
 assert get_relationship('Louis',
                         'Paternal-Uncles') == ['Charlie', 'Percy', 'Ronald']
 assert get_relationship('Louis', 'Paternal-Aunts') == ['Ginerva']
 
-assert get_relationship('Rameus', 'Maternal-Uncles') == ['Louis']
-assert get_relationship('Rameus', 'Maternal-Aunts') == ['Dominique']
+assert get_relationship('Remus', 'Maternal-Uncles') == ['Louis']
+assert get_relationship('Remus', 'Maternal-Aunts') == ['Dominique']
 
 assert get_relationship('Ted', 'Brothers-In-Law') == ['Louis']
 assert get_relationship('Louis', 'Brothers-In-Law') == ['Ted']
@@ -78,3 +78,16 @@ assert get_relationship("William", "Paternal-Aunts") == ["Lily"]
 assert get_relationship("Darcy", "Brothers-In-Law") == ["Albus"]
 assert get_relationship(
     "Helen", "Brothers-In-Law") == ["Bill", "Charlie", "Harry", "Percy"]
+assert get_relationship("Draco", "Maternal-Uncles") == ["Hugo"]
+assert get_relationship("Ron", "Paternal-Aunts") == ["Lily"]
+assert get_relationship("Mahesh", "Paternal-Uncles") == []
+assert get_relationship("Rashmi", "Maternal-Aunts") == []
+assert get_relationship("Ginny", "Brothers") == ["Ron"]
+assert get_relationship("William", "Sisters") == []
+assert get_relationship("William", "Paternal-Uncles") == ["Albus"]
+assert get_relationship("William", "Paternal-Aunts") == ["Lily"]
+assert get_relationship("Ginny", "Paternal-Aunts") == ["Lily"]
+assert get_relationship("Lucy",
+                        "Paternal-Uncles") == ["Bill", "Charlie", "Ronald"]
+assert get_relationship("Remus", "Siblings") == []
+assert get_relationship("Victoire", "Siblings") == ["Dominique", "Louis"]
