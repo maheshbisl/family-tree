@@ -176,44 +176,37 @@ def get_maternal_aunts(name):
   
  
 def get_sisters_in_law(name):
+    member = family[name]
     sisters_in_law = []
     
-    try:
-      sisters_in_law = get_sisters(family[name]['spouse'])
-    except:
-      pass
-    
-    brothers = []
-    try:
-      brothers = get_brothers(name)
-    except:
-      pass
-    
-    for bro in brothers:
-       try:
-          sisters_in_law.append(family[bro]['spouse'])
-       except:     
-          pass
+    if 'spouse' in member:
+        sisters_in_law = get_sisters(member['spouse'])
+  
+    brothers = get_brothers(name)
+    for b in brothers:
+        bro = family[b]
+        if 'spouse' in b
+          sisters_in_law.append(bro['spouse'])
      
     return sisters_in_law
 
   
 def get_brothers_in_law(name):
+    member = family[name]
     brothers_in_law = []
-    if 'spouse' in family[name]:
-      brothers_in_law = get_brothers(family[name]['spouse'])
+    
+    if 'spouse' in member:
+      brothers_in_law = get_brothers(member['spouse'])
+    
     sisters = get_sisters(name)
-
-    for sis in sisters:
-       try:
-          brothers_in_law.append(family[sis]['spouse'])
-       except Exception as e:     
-          pass
+    for s in sisters:
+       sis = family[s]
+       if 'spouse' in sis: 
+          brothers_in_law.append(sis['spouse'])
         
     return brothers_in_law  
  
 
-  
 def get_relationship(name, relationship):
     return {
         'spouse': get_spouse,
