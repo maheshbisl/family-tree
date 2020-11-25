@@ -13,7 +13,7 @@ assert add_child("Queen-Margret", "Percy", "Male") == True
 assert add_child("Queen-Margret", "Ronald", "Male") == True
 assert add_child("Queen-Margret", "Ginerva", "Female") == True
 
-assert get_relationship("Queen-Margret", "Spouse") == "King Arthur"
+assert get_relationship("Queen-Margret", "Spouse") == "King-Arthur"
 
 assert add_spouse("Bill", "Flora") == True
 assert add_spouse("Bill", "Flora") == False
