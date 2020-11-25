@@ -20,6 +20,9 @@ def isMale(name):
 
 
 def add_child(mother, name, gender):
+    if isMember(name):
+        return False
+      
     if isMale(mother):
         return False
 
@@ -38,6 +41,9 @@ def add_child(mother, name, gender):
 
 
 def add_spouse(name, spouse):
+    if not isMember(name):
+        return False
+
     if isMember(spouse):
         return False
 
@@ -85,6 +91,8 @@ def get_daughters(name):
 
 
 def get_sons(name):
+    if not isMember(name):
+       return []
     mother = family[name]
     if isMale(name) and 'spouse' in mother:
         mother = family[mother['spouse']]
@@ -96,6 +104,9 @@ def get_sons(name):
 
 
 def get_brothers(name):
+    if not isMember(name):
+        return []
+    
     member = family[name]
     if 'mother' not in member:
         return []
@@ -107,6 +118,9 @@ def get_brothers(name):
 
 
 def get_sisters(name):
+    if not isMember(name):
+      return []
+    
     member = family[name]
     if 'mother' not in member:
         return []
@@ -118,6 +132,9 @@ def get_sisters(name):
 
 
 def get_paternal_uncles(name):
+    if not isMember(name):
+       return []
+ 
     member = family[name]
     if 'mother' not in member:
         return []
@@ -136,6 +153,8 @@ def get_paternal_uncles(name):
 
 
 def get_paternal_aunts(name):
+    if not isMember(name):
+        return []
     member = family[name]
     if 'mother' not in member:
         return []
@@ -153,6 +172,9 @@ def get_paternal_aunts(name):
 
 
 def get_maternal_uncles(name):
+    if not isMember(name):
+        return []
+      
     member = family[name]
     if 'mother' not in member:
         return []
@@ -166,6 +188,8 @@ def get_maternal_uncles(name):
 
 
 def get_maternal_aunts(name):
+    if not isMember(name):
+        return []
     member = family[name]
     if 'mother' not in member:
         return []
@@ -180,13 +204,16 @@ def get_maternal_aunts(name):
 
 
 def get_sisters_in_law(name):
+    if not isMember(name):
+        return []
     member = family[name]
     sisters_in_law = []
 
+    brothers = get_brothers(name)  
     if 'spouse' in member:
         sisters_in_law = get_sisters(member['spouse'])
-
-    brothers = get_brothers(name)
+        brothers.extend(get_brothers(member['spouse'])
+                        
     for b in brothers:
         bro = family[b]
         if 'spouse' in bro:
@@ -196,18 +223,22 @@ def get_sisters_in_law(name):
 
 
 def get_brothers_in_law(name):
+    if not isMember(name):
+        return []
+              
     member = family[name]
-    brothers_in_law = []
-
-    if 'spouse' in member:
-        brothers_in_law = get_brothers(member['spouse'])
-
+    brothers_in_law = get_brothers(member['spouse'])
     sisters = get_sisters(name)
-    for s in sisters:
+    
+    if 'spouse' in member:
+        sisters.extend(get_sisters(member['spouse']))
+                        
+    for s in sisters :
         sis = family[s]
         if 'spouse' in sis:
             brothers_in_law.append(sis['spouse'])
 
+    print(brothers_in_law)
     return brothers_in_law
 
 

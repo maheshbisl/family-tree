@@ -6,6 +6,9 @@
 3. Traverse based on relationships
 4. Add new members to the family
 
+## Assumption / Limitations
+1. No Duplicate names
+
 ## Commands
 * ADD_CHILD <Child's Mother>  <Child's name> <Gender> 
 * ADD_SPOUSE <Member's Name> <Spouse Name>
