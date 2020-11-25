@@ -34,12 +34,14 @@ assert add_child("Flora", "Dominique", "Female") == True
 
 # Victoire's children
 assert add_child("Victoire", "Rameus", "Male") == True
+assert add_spouse("Victoire", "Ted") == True
 
 assert get_relationship('Louis', 'Paternal-Uncles') == ['Charlie', 'Percy', 'Ronald']
 assert get_relationship('Louis', 'Paternal-Aunts') == ['Ginerva']
 
 assert get_relationship('Rameus', 'Maternal-Uncles') == ['Louis']
 assert get_relationship('Rameus', 'Maternal-Aunts') == ['Dominique']
+
 
 assert get_relationship('Ted', 'Brothers-In-Law') == ['Louis']
 assert get_relationship('Louis', 'Brothers-In-Law') == ['Ted']
