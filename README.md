@@ -1,14 +1,12 @@
 # family-tree
 
 ## Problem
-1. Build a family tree
-2. Monogamous relationship
-3. Traverse based on relationships
-4. Add new members to the family
+1. https://www.geektrust.in/coding-problem/backend/family
 
 ## Assumption / Limitations
 1. No Duplicate names
 2. Names cannot have spaces
+3. Monogamous relationship
 
 ## Commands
 * ADD_CHILD Mother Child Gender 
