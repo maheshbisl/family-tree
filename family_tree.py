@@ -59,14 +59,20 @@ def add_spouse(name, spouse):
 
 
 def get_spouse(name):
+    if not isMember(name):
+        return ""
+
     member = family[name]
     if 'spouse' not in member:
-        return None
+        return ""
 
     return member['spouse']
 
 
 def get_siblings(name):
+    if not isMember(name):
+        return []
+
     member = family[name]
     if 'mother' not in member:
         return []
@@ -80,6 +86,9 @@ def get_siblings(name):
 
 
 def get_daughters(name):
+    if not isMember(name):
+        return []
+
     mother = family[name]
     if isMale(name) and 'spouse' in mother:
         mother = family[family[name]['spouse']]
@@ -93,6 +102,7 @@ def get_daughters(name):
 def get_sons(name):
     if not isMember(name):
         return []
+
     mother = family[name]
     if isMale(name) and 'spouse' in mother:
         mother = family[mother['spouse']]
@@ -155,6 +165,7 @@ def get_paternal_uncles(name):
 def get_paternal_aunts(name):
     if not isMember(name):
         return []
+
     member = family[name]
     if 'mother' not in member:
         return []
@@ -190,6 +201,7 @@ def get_maternal_uncles(name):
 def get_maternal_aunts(name):
     if not isMember(name):
         return []
+
     member = family[name]
     if 'mother' not in member:
         return []
