@@ -36,3 +36,18 @@
 ### Data Structure
 1. Dictionary of members with 'Name' as the key.
 2. Each member of is a dictionary with properties { Spouse: String, Male: Boolean, Mother: String, Children: Array }
+
+### Programming language
+- Python 3.7
+
+### Tested on
+```Ubuntu 16.04 LTS (Xenial Xerus)```
+
+## Testing
+- Check `test.sh`
+
+### Unit testing
+- Run ``` python test.py```
+
+### Run the application
+- Run ```python family_tree.py test-input```
