@@ -17,8 +17,4 @@ jobs:
       with:
         python-version: 3.7
     - name: Test
-      run: |
-        set -ex
-        python test.py
-        python family_tree.py test-input > /tmp/tmp-output
-        diff test-output /tmp/tmp-output || exit -1
+      run: bash test.sh
