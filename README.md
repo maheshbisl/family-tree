@@ -7,6 +7,7 @@
 1. No Duplicate names
 2. Names cannot have spaces
 3. Monogamous relationship
+4. No Samesex Marriages
 
 ## Commands
 * ADD_CHILD Mother Child Gender 
@@ -14,6 +15,8 @@
 * GET_RELATIONSHIP Name Relationship
 
 ### Relationship:
+- Mother
+- Father
 - Spouse
 - Daughters
 - Siblings
@@ -24,8 +27,11 @@
 - Paternal-Aunts
 - Maternal-Uncles
 - Maternal-Aunts
+- Uncles
+- Aunts
 - Sisters-In-Law
 - Brothers-In-Law
+- Siblings-In-Law
 
 ## CI/CD
 1. GitHub actions
