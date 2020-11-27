@@ -75,8 +75,6 @@ def get_spouse(name):
 
 
 def get_siblings(name):
-    if not hasMother(name):
-      return []
     return list(filter(lambda x: x != name, get_children(get_mother(name))))
 
 def get_daughters(name):
