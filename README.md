@@ -7,6 +7,7 @@
 1. No Duplicate names
 2. Names cannot have spaces
 3. Monogamous relationship
+4. No Samesex Marriages
 
 ## Commands
 * ADD_CHILD Mother Child Gender 
