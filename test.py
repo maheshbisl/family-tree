@@ -12,8 +12,11 @@ assert add_child("Queen-Margret", "Charlie", "Male") == True
 assert add_child("Queen-Margret", "Percy", "Male") == True
 assert add_child("Queen-Margret", "Ronald", "Male") == True
 assert add_child("Queen-Margret", "Ginerva", "Female") == True
+assert get_relationship("Bill", "Sisters") == ["Ginerva"]
 
 assert get_relationship("Queen-Margret", "Spouse") == "King-Arthur"
+assert get_relationship("Charlie", "Mother") == "Queen-Margret"
+assert get_relationship("Ginerva", "Father") == "King-Arthur"
 
 assert add_spouse("Bill", "Flora") == True
 assert add_spouse("Bill", "Flora") == False
@@ -60,6 +63,8 @@ assert add_spouse("Victoire", "Ted") == True
 assert get_relationship('Louis',
                         'Paternal-Uncles') == ['Charlie', 'Percy', 'Ronald']
 assert get_relationship('Louis', 'Paternal-Aunts') == ['Ginerva']
+assert get_relationship('Louis', 'Aunts') == ['Ginerva']
+assert get_relationship('Louis', 'Uncles') == ['Charlie', 'Percy', 'Ronald']
 
 assert get_relationship('Remus', 'Maternal-Uncles') == ['Louis']
 assert get_relationship('Remus', 'Maternal-Aunts') == ['Dominique']
@@ -69,6 +74,7 @@ assert get_relationship('Louis', 'Brothers-In-Law') == ['Ted']
 
 assert get_relationship('Dominique', 'Brothers-In-Law') == ['Ted']
 assert get_relationship('Ted', 'Sisters-In-Law') == ['Dominique']
+assert get_relationship('Ted', 'Siblings-In-Law') == ['Dominique', 'Louis']
 
 assert get_relationship(
     'James', "Maternal-Uncles") == ["Bill", "Charlie", "Percy", "Ronald"]

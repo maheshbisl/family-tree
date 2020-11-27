@@ -15,6 +15,8 @@
 * GET_RELATIONSHIP Name Relationship
 
 ### Relationship:
+- Mother
+- Father
 - Spouse
 - Daughters
 - Siblings
@@ -25,8 +27,11 @@
 - Paternal-Aunts
 - Maternal-Uncles
 - Maternal-Aunts
+- Uncles
+- Aunts
 - Sisters-In-Law
 - Brothers-In-Law
+- Siblings-In-Law
 
 ## CI/CD
 1. GitHub actions
